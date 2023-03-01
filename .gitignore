@@ -1,0 +1,6 @@
+.idea
+out
+*.txt*
+*.iml
+*mylib*
+*sandbox*
