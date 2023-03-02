@@ -1,4 +1,4 @@
-package Lesson_03;
+package Lesson3;
 
 import java.util.Arrays;
 import java.util.List;
@@ -12,5 +12,8 @@ public class Ex005 {
         System.out.println(d); // [29, 9, 1990]
         day = new StringBuilder("09");
         System.out.println(d); // [29, 09, 1990]
+//        d.add((StringBuilder) "01");
+        d.remove(1);
+        System.out.println(d);
     }
 }

@@ -1,4 +1,4 @@
-package Lesson_03;
+package Lesson3;
 import java.util.Arrays;
 import java.util.List;
 
@@ -10,5 +10,6 @@ public class Ex004 {
         Integer[] date = { day, month, year };
         List<Integer> d = Arrays.asList(date);
         System.out.println(d); // [29, 9, 1990]
+        d.remove(0);
     }
 }

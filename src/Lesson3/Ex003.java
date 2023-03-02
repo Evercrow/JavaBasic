@@ -1,4 +1,4 @@
-package Lesson_03;
+package Lesson3;
 
 import java.util.ArrayList;
 

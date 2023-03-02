@@ -29,10 +29,15 @@ public class Homework2_3 {
 
         System.out.println(strFromJSON("students.json"));
 
+
     }
 
     public static String strFromJSON(String jsonFName){
         File json_file = new File(System.getProperty("user.dir")+"/"+jsonFName);
+
+        //путь к скомпилированному проекту
+        //System.out.println(Homework2_3.class.getProtectionDomain().getCodeSource().getLocation().getPath());
+
         StringBuilder grades_str = new StringBuilder();
         try {
             FileReader f = new FileReader(json_file);
