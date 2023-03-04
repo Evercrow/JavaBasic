@@ -8,11 +8,16 @@ import java.util.Random;
  */
 public class homework3 {
     public static void main(String[] args) {
-        int[] testArray_rng = getRandomIntArray(0,100,13);
+
+        int[] testArray_rng = getRandomIntArray(0,100,100);
         int[] testArray1 = {82, 45, 54, 5, 3, 13, 23, 18,67,10,11};
         int[] testArray2 = {91, 84, 81, 97, 14, 27, 20, 10};
+        System.out.println("Массив до:");
         System.out.println(Arrays.toString(testArray_rng));
+        System.out.println("Массив после:");
         System.out.println(Arrays.toString(mergeSort(testArray_rng)));
+        //тест без печати,на миллион
+//        testArray_rng = mergeSort(testArray_rng);
     }
 
     public static int[] getRandomIntArray(int lower,int upper,int size){
@@ -44,8 +49,8 @@ public class homework3 {
             }
             piece_size *=2;
 
-            System.out.print("Array after iteration ");
-            System.out.println(Arrays.toString(arr));
+//            System.out.print("Array after iteration ");
+//            System.out.println(Arrays.toString(arr));
         }
 
         //Обработка хвоста,некратного степени двойки
@@ -56,7 +61,7 @@ public class homework3 {
             System.arraycopy(arr,tail_start,tail_array,0,tail_size);
 
             //рекурсивный вызов сортировки
-             System.out.println("Обработка хвоста массива слиянием");
+             //System.out.println("Обработка хвоста массива рекурсивно");
             System.arraycopy(mergeSort(tail_array),0,arr,tail_start,tail_size);
 
             // И теперь делаем последний проход слияния, сортированный основной массив и сортированный хвост
@@ -104,9 +109,8 @@ public class homework3 {
             merge_index++;
         }
 
-
-        System.out.print("buffer ");
-        System.out.println(Arrays.toString(merge_buffer));
+//        System.out.print("buffer ");
+//        System.out.println(Arrays.toString(merge_buffer));
         return merge_buffer;
     }
 
