@@ -1,4 +1,6 @@
-package Lesson7.Ex002;
+package main.java.Lesson7.Ex002;
+
+
 
 public class Program {
     static double distance(int x1, int y1, int x2, int y2) {

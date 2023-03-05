@@ -1,4 +1,4 @@
-package Lesson7.Ex003;
+package main.java.Lesson7.Ex003;
 
 public class Program {
 

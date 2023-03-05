@@ -1,4 +1,4 @@
-package Lesson7.Ex004;
+package main.java.Lesson7.Ex004;
 
 public class Robot1 {
         /**Уровень робота */
