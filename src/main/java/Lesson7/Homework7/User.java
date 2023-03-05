@@ -1,4 +1,4 @@
-package Lesson8.Homework8;
+package Lesson7.Homework7;
 
 /**
  * 4)класс User, содержащий логин, пароль и объект класса Basket. Создать несколько объектов класса User.
