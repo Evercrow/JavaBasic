@@ -37,6 +37,7 @@ public class Category {
         List<Merch> checked = new ArrayList<>(List.of(assortment));
         checked.removeAll(basket.orderlist);
         assortment = checked.toArray(new Merch[0]);
+     //    assortment = (Merch[]) checked.toArray();  //bad behavior with non-null Merch objects
 
     }
 
