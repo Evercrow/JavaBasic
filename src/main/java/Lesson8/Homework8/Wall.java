@@ -1,8 +1,8 @@
 package Lesson8.Homework8;
 
-public class Wall {
+public class Wall extends Obstacle {
 
-    private final double height;
+    private  double height;
 
     public double getHeight() {
         return height;
@@ -12,8 +12,14 @@ public class Wall {
         this.height = height;
     }
 
+    public Wall(){
+        this.height= r.nextDouble(10.1);
+    }
+
     @Override
     public String toString() {
         return String.format("Стена высотой %.1fм",height);
     }
+
+
 }

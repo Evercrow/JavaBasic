@@ -1,8 +1,8 @@
 package Lesson8.Homework8;
 
-public class Runway {
+public class Runway extends Obstacle{
 
-    private final int length;
+    private  int length;
 
     public int getLength() {
         return length;
@@ -10,6 +10,9 @@ public class Runway {
 
     public Runway(int length) {
         this.length = length;
+    }
+    public Runway(){
+        this.length = r.nextInt(1000);
     }
 
     @Override
