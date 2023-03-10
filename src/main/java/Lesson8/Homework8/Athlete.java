@@ -2,6 +2,7 @@ package Lesson8.Homework8;
 
 import java.util.Random;
 
+
 public abstract class Athlete {
 
     protected String name;
@@ -23,15 +24,10 @@ public abstract class Athlete {
             case 1: new Robot();break;
             case 0: new Human();break;
             default: break;
-            // default: new Human("Некто", 50 , 1);break;
+
         };
     }
-//    public Athlete(Athlete player){
-//        this.name = player.name;
-//        this.running_max = player.running_max;
-//        this.jumping_max = player.jumping_max;
-//        this.athlete_id = ++athlete_total;
-//    }
+
 
 
     @Override
