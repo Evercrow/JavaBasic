@@ -6,11 +6,12 @@ public abstract class Athlete {
 
     protected String name;
     protected int athlete_id;
-    protected static int athlete_total ;
-    protected static Random r;
-    protected int running_max, jumping_max ;
+    protected static int athlete_total = 0;
+    protected static Random r = new Random();
+    protected int running_max;
+    protected double jumping_max ;
 
-    public Athlete(String name, int running_max, int jumping_max) {
+    public Athlete(String name, int running_max, double jumping_max) {
         this.name = name;
         this.running_max = running_max;
         this.jumping_max = jumping_max;
@@ -39,7 +40,7 @@ public abstract class Athlete {
     }
 
     String showAbilities() {
-        return String.format("Атлет %s умеет бегать на %dм и прыгать на %dм",this.name,this.running_max,this.jumping_max);
+        return String.format("Атлет %s умеет бегать на %dм и прыгать на %.1fм",this.name,this.running_max,this.jumping_max);
     }
 
 

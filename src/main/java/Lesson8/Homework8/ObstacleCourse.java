@@ -6,13 +6,13 @@ import java.util.Random;
 
 public class ObstacleCourse {
 
-    private ArrayList<Object> match_course;
-    protected Random r;
+    protected ArrayList<Obstacle> match_course = new ArrayList<>();
+    protected static Random r = new Random();
 
-    public ObstacleCourse( Object[] obstacles) {
+    public ObstacleCourse( Obstacle[] obstacles) {
 
-        for (Object o:obstacles){
-            if(o instanceof Obstacle){
+        for (Obstacle o:obstacles){
+            if(o !=null){
                 this.match_course.add(o);
             }
 
@@ -21,7 +21,7 @@ public class ObstacleCourse {
     }
 
     /**
-     * Create arrayList of random Obstacle objects
+     * Creates arrayList of random Obstacle objects called match_course
      * @param course_length - how many Obstacles you need
      */
     public ObstacleCourse(int course_length){
@@ -35,5 +35,41 @@ public class ObstacleCourse {
 
         }
 
+    }
+
+    public boolean runCourse(Athlete a){
+       boolean success = false;
+        for (Obstacle o: match_course){
+            if(o instanceof Wall){
+                success = a.jump(((Wall) o).getHeight());
+            }else if(o instanceof Runway){
+                success = a.run(((Runway) o).getLength());
+            }
+            if(!success){return success;}
+        }
+        if(success){
+            System.out.printf("Атлет %s пришел к финишу!",a.name);
+        }
+       return  success;
+    }
+
+    public void runTournament(Athlete[] players){
+        for (Athlete i: players){
+            System.out.println(i + " готовится к старту.");
+            System.out.println(i.showAbilities());
+            System.out.println("Старт!");
+            this.runCourse(i);
+            System.out.println("\n------");
+        }
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder(this.match_course.size()*20);
+        for (Obstacle o:this.match_course){
+            sb.append(o.toString());
+            sb.append("\n");
+        }
+        return sb.toString();
     }
 }

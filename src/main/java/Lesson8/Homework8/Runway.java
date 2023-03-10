@@ -12,7 +12,7 @@ public class Runway extends Obstacle{
         this.length = length;
     }
     public Runway(){
-        this.length = r.nextInt(1000);
+        this.length = r.nextInt(500);
     }
 
     @Override

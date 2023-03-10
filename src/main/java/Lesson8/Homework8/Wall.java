@@ -4,6 +4,7 @@ public class Wall extends Obstacle {
 
     private  double height;
 
+
     public double getHeight() {
         return height;
     }
@@ -13,7 +14,7 @@ public class Wall extends Obstacle {
     }
 
     public Wall(){
-        this.height= r.nextDouble(10.1);
+        this.height= r.nextDouble(3.1);
     }
 
     @Override
